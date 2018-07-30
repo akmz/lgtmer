@@ -14,7 +14,7 @@ lgtmer.controller("SearchHistoryController", ['$scope', '$http', '$timeout', fun
     copyDiv.contentEditable = true;
     document.body.appendChild(copyDiv);
 
-    copyDiv.innerHTML = "![LGTM](http://hisaichilgtm.herokuapp.com/" + lgtm + ")";
+    copyDiv.innerHTML = "![LGTM](http://hisaichilgtm.herokuapp.com/" + lgtm.replace('https','http') + ")";
     copyDiv.unselectable = "off";
     copyDiv.focus();
 
